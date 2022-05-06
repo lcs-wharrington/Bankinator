@@ -9,8 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            
+            List {
+                
+                NavigationLink(destination: IncomeView()) {
+                    
+                    SimpleListItemView(title: "Income",
+                                       caption: "WH")
+                    
+                }
+                NavigationLink(destination: ExpensesView()) {
+                    
+                    SimpleListItemView(title: "Expenses",
+                                       caption: "WH")
+                    
+                }
+                NavigationLink(destination: StatisticsView()) {
+                    
+                    SimpleListItemView(title: "Statistics",
+                                       caption: "WH")
+                    
+                }
+            }
+            .listStyle(GroupedListStyle())
+            
+        }
+        .navigationTitle("Bankinator")
     }
 }
 

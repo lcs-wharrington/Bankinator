@@ -11,7 +11,12 @@ import SwiftUI
 struct BankinatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            NavigationView {
+                
+                ContentView()
+                
+            }
         }
     }
 }
